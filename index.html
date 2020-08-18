@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+
+<html lang="cs">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Algoritmy pro Rubikovu kostku</title>
+
+    <link rel="stylesheet" href="css/cssreset.css">
+
+    <link rel="stylesheet" href="css/stylemain.css">
+
+    <link rel="stylesheet" href="css/lightbox.css">
+
+    <link rel="icon" href="pics/ikona.png">
+
+    <meta name="keywords" content="Rubikova kostka, algoritmy, OLL, PLL">
+
+</head>
+
+<body>
+
+<div class="obsah">
+
+<div class="zahlavi">
+
+<h1>Algoritmy pro Rubikovu kostku</h1>
+<!-- <h1>zkouška jestli funguje</h1> -->
+
+<p>Tato stránka neslouží jako návod k samotnému složení Rubikovy kostky, jen obsahuje seznam algoritmů z posledních dvou kroků potřebných ke složení Rubikovy kostky pomocí metody CFOP.</p>
+
+<p>Metoda CFOP má čtyři části:</p>
+
+</div>
+
+<div class="tabulka">
+
+<table class="tbl">
+
+<thead>
+
+    <tr>
+
+        <th>Cross</th>
+
+        <th>F2L</th>
+
+        <th>OLL</th>
+
+        <th>PLL</th>
+
+    </tr>
+
+</thead>
+
+<tbody>
+
+    <tr>
+
+        <td>V této fázi jde o složení kříže na jedné straně kostky.</td>
+
+        <td><em>(= First 2 layers)</em> - Složí se první 2 vrstvy kostky.</td>
+
+        <td><em>(= Orientation of last layer)</em> - Pomocí jednoho nebo dvou algoritmů se docílí toho, že všechny dílky ve vrchní vrsvě mají nahoře stejnou barvu.</td>
+
+        <td><em>(= Permutation of last layer)</em> - Finální fáze, permutace hran i rohů na správná místa.</td>
+
+    </tr>
+
+    <tr>
+
+        <td colspan="2">Tyto 2 části jsou spíše intuitivní.</td>
+
+        <td>Pro 2-look 8 algoritmů, pro 1-look 57.</td>
+
+        <td>Pro 2-look 6 algoritmů, pro 1-look 21.</td>
+
+    </tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="tlacitka">
+
+<nav>
+
+<button onclick="window.location.href='html/OLL1.html'" class="btn1">2-look OLL</button>
+
+<button onclick="window.location.href='html/OLL2.html'" class="btn1">1-look OLL</button>
+
+<button onclick="window.location.href='html/PLL1.html'" class="btn1">2-look PLL</button>
+
+<button onclick="window.location.href='html/PLL2.html'" class="btn1">1-look PLL</button>
+
+<button onclick="window.location.href='html/me.html'" class="btn1">O mně</button>
+
+<button onclick="window.location.href='html/java.html'" class="btn1">JS</button>
+
+</nav>
+
+    </div>
+
+<div class="obrazek">
+
+<p>Notace pohybů na kostce:</p>
+
+<a href="pics/notation.png" data-lightbox="obr1" data-title="Notace pohybů na Rubikově kostce"><img src="pics/notation.png" alt="Způsob notace pohybů na Rubikově kostce"></a>
+
+</div>
+
+<div class="note">
+
+<p>
+
+poznámka:
+
+<br>Samotné písmeno (B) značí otočení strany ve směru hodinových ručiček, které si na dané straně představíme. Písmeno s&nbsp;apostrofem pak značí směr opačný. (Např. <em>F'</em> čteme <em>F prime</em>)
+
+<br>Malé písmeno v algoritmu (r, u, l...) značí otočení strany zaráz s prostřední vrstvou (například pohyb r provedeme tak, že otočíme nahoru pravou a prostřední vrstvou kostky zaráz.)
+
+</p>
+
+</div>
+
+<footer class="ftr">Filip Kocháň, 2020</footer>
+
+</div>
+
+<script
+
+    src="https://code.jquery.com/jquery-3.4.1.js"
+
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+
+    crossorigin="anonymous"></script>
+
+<script src="js/lightbox.js"></script>
+
+<script>
+
+    lightbox.option({
+
+        'disableScrolling' : true,
+
+        'showImageNumberLabel' : false
+
+    })
+
+</script>
+
+</body>
+
+</html>

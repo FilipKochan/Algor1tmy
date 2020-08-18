@@ -1,0 +1,227 @@
+body{
+
+    font-size: 150%;
+
+    background: repeating-linear-gradient(22.5deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px,transparent 1px, transparent 21px,rgba(255,255,255,0.07) 21px, rgba(255,255,255,0.07) 22px,transparent 22px, transparent 62px,rgba(255,255,255,0.07) 62px, rgba(255,255,255,0.07) 63px,transparent 63px, transparent 123px),repeating-linear-gradient(112.5deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px,transparent 1px, transparent 21px,rgba(255,255,255,0.07) 21px, rgba(255,255,255,0.07) 22px,transparent 22px, transparent 62px,rgba(255,255,255,0.07) 62px, rgba(255,255,255,0.07) 63px,transparent 63px, transparent 123px),repeating-linear-gradient(67.5deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px,transparent 1px, transparent 21px,rgba(255,255,255,0.07) 21px, rgba(255,255,255,0.07) 22px,transparent 22px, transparent 62px,rgba(255,255,255,0.07) 62px, rgba(255,255,255,0.07) 63px,transparent 63px, transparent 123px),repeating-linear-gradient(157.5deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px,transparent 1px, transparent 21px,rgba(255,255,255,0.07) 21px, rgba(255,255,255,0.07) 22px,transparent 22px, transparent 62px,rgba(255,255,255,0.07) 62px,
+
+    rgba(255,255,255,0.07) 63px,transparent 63px, transparent 123px),linear-gradient(45deg,hsl(210,81%,56%), hsl(184, 9%, 62%));
+
+    margin: 25px 25px 0 25px;
+
+    background-attachment: fixed;
+
+    font-family: Tahoma, Geneva, sans-serif;
+
+}
+
+.obsah{
+
+    background-color: rgba(255, 255, 255, 0.7);
+
+    padding: 25px 50px;
+
+    margin: 25px auto;
+
+    border-radius: 20px;
+
+}
+
+footer{
+
+    vertical-align: bottom;
+
+    text-align: right;
+
+    margin-top: 25px;
+
+    clear: both;
+
+}
+
+h1{
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    margin-bottom: 50px;
+
+    font-size: 3rem;
+
+    font-family: georgia,serif;
+
+}
+
+p{
+
+    padding: 5px 0 5px 0;
+
+}
+
+.btn{
+
+    position: fixed;
+
+    font-size: 1rem;
+
+    border: 3px solid hsl(210,81%,56%);
+
+    border-radius: 15px;
+
+    background-color: hsl(184, 9%, 62%);
+
+    font-size: 2rem;
+
+    width: 4rem;
+
+    bottom: 35px;
+
+    z-index: 1;
+
+
+    transition: 0.5s ease-in-out;
+
+}
+
+.btn:hover{
+
+    background-color: hsl(210,81%,56%);
+
+    color: #fff;
+
+    cursor: pointer;
+}
+
+.tab1{
+
+    margin: auto;
+
+    margin-top: 30px;
+
+}
+
+.tab1 tr{
+
+    text-align: center;
+
+}
+
+.tab1 td, .tab1 th{
+
+    vertical-align: middle;
+
+    padding: 15px;
+
+}
+
+tbody tr{
+
+    border-bottom: 4px solid #000;
+
+}
+
+.obrazek{
+
+    background-color: #fff;
+
+}
+
+.tdjmeno{
+
+    font-weight: bold;
+
+    font-size: 0.9em;
+
+}
+
+.emptytd{
+
+    width: 8%;
+
+}
+
+.trjmeno{
+
+    background-color: #5bbd843a;
+
+}
+
+nav ul li{
+
+    display: block;
+
+    margin-right: 25px;
+
+}
+
+nav{
+
+    position: sticky;
+
+    position: -webkit-sticky;
+
+    top: 0;
+
+}
+
+nav a{
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 7px;
+
+    font-size: 1.4rem;
+
+    background-color: #82b0ff;
+
+    border-radius: 5px;
+
+
+
+    transition: 0.3s ease-in-out;
+}
+
+nav a:hover{
+
+    background-color: #002f80;
+
+
+    color: #fff;
+
+}
+
+.nav{
+
+    grid-area: nav;
+
+}
+
+.text{
+
+    grid-area: txt;
+
+}
+
+.tab1{
+
+    grid-area: tab;
+
+}
+
+.gridobsah{
+
+    display: grid;
+
+    grid-template-areas:
+
+    'txt txt'
+
+    'nav tab'
+
+    ;
+
+}

@@ -1,0 +1,101 @@
+.table2{
+    /*background-color: #f5aec3;*/
+    /*position: relative;*/
+    float:left;
+    border: 3px solid black;
+    width: 400px;
+    height: 150px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.table3{
+    float: left;
+    border: 3px solid black;
+    width: 400px;
+    height: 150px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.table4{
+    float: left;
+    border: 3px solid black;
+    width: 400px;
+    height: 150px;
+    margin-top: 25px;
+    margin-left: 25px;  
+}
+.table2 td, .table3 td, .table4 td {
+    vertical-align: middle;
+    padding: 10px
+}
+.table1 td, .table1a td{
+    width: 17px;
+    height: 17px;
+}
+.td1, .td2, .td3, .td4, .td5, .td6, .td7, .td8, .td9,
+.td1a, .td2a, .td3a, .td4a, .td5a, .td6a, .td7a, .td8a, .td9a
+{
+    border: 1px solid black;
+}
+.td1{
+    background-color: #C6C6C6;
+    border-top: 5px solid yellow;
+}
+.td2{
+    background-color: #C6C6C6;
+    border-top: 5px solid yellow;
+}
+.td3{
+    background-color: yellow;
+}
+.td4{
+    background-color: yellow;
+}
+.td5{
+    background-color: yellow;
+}
+.td6{
+    background-color: yellow;
+}
+.td7{
+    background-color: #C6C6C6;
+    border-bottom: 5px solid yellow;
+}
+.td8{
+    background-color: #C6C6C6;
+    border-bottom: 5px solid yellow;
+}
+.td9{
+    background-color: yellow;
+}
+.td1a{
+    background-color: #C6C6C6;
+    border-left: 5px solid yellow;
+}
+.td2a{
+    background-color: #C6C6C6;    
+    border-top: 5px solid yellow;
+}
+.td3a{
+    background-color: yellow;
+}
+.td4a{
+    background-color: yellow;
+}
+.td5a{
+    background-color: yellow;
+}
+.td6a{
+    background-color: yellow;
+}
+.td7a{
+    background-color: #C6C6C6;
+    border-left: 5px solid yellow;
+}
+.td8a{
+    background-color: #C6C6C6;
+    border-bottom: 5px solid yellow;
+}
+.td9a{
+    background-color: yellow;
+}

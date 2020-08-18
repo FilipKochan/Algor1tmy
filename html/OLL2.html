@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<title>1-look OLL</title>
+<meta charset="utf-8">
+<script src="https://kit.fontawesome.com/afcefdcf53.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../css/cssreset.css">
+<link rel="stylesheet" href="../css/styleOLL2.css">
+<link rel="icon" href="../pics/ikona.png">
+</head>
+<body>
+<div class="obsah">
+<button onclick="window.location.href='../index.html'" class="btn"><i class="fas fa-long-arrow-alt-left"></i></button>  
+<h1>1-look OLL</h1>
+<div class="gridobsah">
+<div class="nav">
+<nav>
+    <ul>
+        <li><a href="#edgesoriented">Všechny&nbsp;hrany&nbsp;orientovanné</a></li>
+        <li><a href="#tshapes">Tvary&nbsp;T</a></li>
+        <li><a href="#sq">Čtverce</a></li>
+        <li><a href="#cshapes">Tvary&nbsp;C</a></li>
+        <li><a href="#wshapes">Tvary&nbsp;W</a></li>
+        <li><a href="#2eo">Rohy&nbsp;+&nbsp;2&nbsp;hrany&nbsp;správně</a></li>
+        <li><a href="#pshapes">Tvary&nbsp;P</a></li>
+        <li><a href="#ishapes">Tvary&nbsp;I</a></li>
+        <li><a href="#fish">„Rybí“&nbsp;tvary</a></li>
+        <li><a href="#knightmove">Tvary&nbsp;pohybu&nbsp;jezdce</a></li>
+        <li><a href="#awkwardshapes">„Nepříjemné“&nbsp;tvary</a></li>
+        <li><a href="#lshapes">Tvary&nbsp;L</a></li>
+        <li><a href="#boltshapes">Lightning&nbsp;bolts</a></li>
+        <li><a href="#dotshapes">Dot&nbsp;shapes</a></li>
+    </ul>
+</nav>
+</div>
+<div class="text">
+<p>Zde je seznam algoritmů ze sekce 1-look OLL.</p>
+<p>V 1-look OLL otočíme všechny rohy i hrany naráz v jednom kroku (proto 1-look). Nevýhodou je ale větší počet algoritmů k naučení&nbsp;-&nbsp;57.</p>
+</div>
+<table class="tab1">
+<thead>
+    <tr>
+        <th>No.</th>
+        <th>Obrázek</th>
+        <th>Algoritmus</th>
+        <th class="emptytd"></th>
+        <th>Algoritmus</th>
+        <th>Obrázek</th>
+        <th>No.</th>
+    </tr>
+</thead>
+<tbody>
+    <tr class="trjmeno" style="border-top: 4px solid #000000;">
+        <td class="tdjmeno" id="edgesoriented" colspan="7">Všechny hrany jsou orientované</td>
+    </tr>
+    <tr>
+        <td>27</td>
+        <td class="obrazek"><img src="../pics/alledgesoriented1.jpg" alt="Sune"></td>
+        <td class="alg">(R U R' U)(R U2 R')</td>
+        <td class="emptytd"></td>
+        <td class="alg">(R' U' R U')(R' U2 R)</td>
+        <td class="obrazek"><img src="../pics/alledgesoriented2.jpg" alt="Antisune"></td>
+        <td>26</td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td class="obrazek"><img src="../pics/alledgesoriented3.jpg" alt="OLL case 21"></td>
+        <td class="alg">F (R U R' U')3 F'<br>
+            nebo<br>
+            (R U2 R' U')(R U R' U') R U' R'</td>
+        <td class="emptytd"></td>
+        <td class="alg">R U2' R2' U' R2 U' R2' U2' R </td>
+        <td class="obrazek"><img src="../pics/alledgesoriented4.jpg" alt="OLL case 22"></td>
+        <td>22</td>
+    </tr>
+    <tr>
+        <td>24</td>
+        <td class="obrazek"><img src="../pics/alledgesoriented6.jpg" alt="OLL case 24"></td>
+        <td class="alg">(r U R' U')(r' F R F')</td>
+        <td class="emptytd"></td>
+        <td class="alg">(l' U' L' U)(l F' L F)</td>
+        <td class="obrazek"><img src="../pics/alledgesoriented5.jpg" alt="OLL case 25"></td>
+        <td>25</td>
+    </tr>   
+    <tr>
+        <th>23</th>
+        <th class="obrazek"><img src="../pics/alledgesoriented7.jpg"  alt="OLL case 23"></th>
+        <th class="alg">(R U R' U)(R U2 R')(R' U' R U')(R' U2 R)</th>
+        <th class="emptytd"></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr class="trjmeno">
+        <td class="tdjmeno" id="tshapes" colspan="7">Tvary T</td>
+    </tr>
+    <tr>
+        <td>33</td>
+        <td class="obrazek"><img src="../pics/tcase1.png" alt="OLL case 33"></td>
+        <td class="alg">(R U R' U')(R' F R F')</td>
+        <td class="emptytd"></td>
+        <td class="alg">F (R U R' U') F'</td>
+        <td class="obrazek"><img src="../pics/tcase2.png" alt="OLL case 45"></td>
+        <td>45</td>
+    </tr> 
+    <tr class="trjmeno">
+        <td class="tdjmeno" id="sq" colspan="7">Čtverce</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td class="obrazek"><img src="../pics/1.png" alt="OLL case 5"></td>
+        <td class="alg">r' U2' R U R' U r</td>
+        <td class="emptytd"></td>
+        <td class="alg">r U2 R' U' R U' r</td>
+        <td class="obrazek"><img src="../pics/2.png" alt="OLL case 6"></td>
+        <td>6</td>
+    </tr>
+    <tr class="trjmeno">
+        <td class="tdjmeno" id="cshapes" colspan="7">Tvary C</td>
+    </tr>
+    <tr>
+        <td>34</td>
+        <td class="obrazek"><img src="../pics/3.png" alt="OLL case 34"></td>
+        <td class="alg">(R U R' U') B' (R' F R F') B</td>
+        <td class="emptytd"></td>
+        <td class="alg">R' U' (R' F R F') U R</td>
+        <td class="obrazek"><img src="../pics/4.png" alt="OLL case 46"></td>
+        <td>46</td>
+    </tr>
+    <tr class="trjmeno">
+        <td class="tdjmeno" id="wshapes" colspan="7">Tvary W</td>
+    </tr>
+    <tr>
+        <td>36</td>
+        <td class="obrazek"><img src="../pics/5a.png" alt="OLL case 36"></td>
+        <td class="alg">(L' U' L U')(L' U L U)( L F' L' F)</td>
+        <td class="emptytd"></td>
+        <td class="alg">(R U R' U) (R U' R' U') (R' F R F')</td>
+        <td class="obrazek"><img src="../pics/5.png" alt="OLL case 38"></td>
+        <td>38</td>
+    </tr>
+    <tr class="trjmeno">
+        <td class="tdjmeno" id="2eo" colspan="7">Rohy otočené správně, 2 hrany špatně</td>
+    </tr>
+    <tr>
+        <td>28</td>
+        <td class="obrazek"><img src="../pics/6.png" alt="OLL case 28"></td>
+        <td class="alg">(r U R' U') M (U R U' R')</td>
+        <td class="emptytd"></td>
+        <td class="alg">(R U R' U') M' (U R U' r')</td>
+        <td class="obrazek"><img src="../pics/7.png" alt="OLL case 57"></td>
+        <td>57</td>
+    </tr>
+    <tr class="trjmeno">
+        <td class="tdjmeno" id="pshapes" colspan="7">Tvary P</td>
+    </tr>
+    <tr>
+        <td>43</td>
+        <td class="obrazek"><img src="../pics/8.png" alt="OLL case 43"></td>
+        <td class="alg">f' (L' U' L U) f </td>
+        <td class="emptytd"></td>
+        <td class="alg">f (R U R' U') f'</td>
+        <td class="obrazek"><img src="../pics/9.png" alt="OLL case 44"></td>
+        <td>44</td>
+    </tr>
+    <tr>
+        <td>31</td>
+        <td class="obrazek"><img src="../pics/10.png" alt="OLL case 31"></td>
+        <td class="alg">(R' U' F)(U R U' R') F' R</td>
+        <td class="emptytd"></td>
+        <td class="alg">F' f (R U R' U')(R' F R f')</td>
+        <td class="obrazek"><img src="../pics/11.png" alt="OLL case 32"></td>
+        <td>32</td>
+    </tr>
+    <tr class="trjmeno">
+        <td class="tdjmeno" id="ishapes" colspan="7">Tvary I</td>
+    </tr>
+    <tr>
+        <td>51</td>
+        <td class="obrazek"><img src="../pics/12.png" alt="OLL case 51"></td>
+        <td class="alg">f (R U R' U')(R U R' U') f'</td>
+        <td class="emptytd"></td>
+        <td class="alg">(R U R' U R U') y (R U' R') F'</td>
+        <td class="obrazek"><img src="../pics/13.png" alt="OLL case 52"></td>
+        <td>52</td>
+    </tr>
+    <tr>
+        <td>55</td>
+        <td class="obrazek"><img src="../pics/14.png" alt="OLL case 55"></td>
+        <td class="alg">r U2 (R2' F R F') U2 (r' F R F')</td>
+        <td class="emptytd"></td>
+        <td class="alg">r' U' r (U' R' U R)(U' R' U R) r' U r</td>
+        <td class="obrazek"><img src="../pics/15.png" alt="OLL case 56"></td>
+        <td>56</td>
+    </tr><tr class="trjmeno">
+        <td class="tdjmeno" id="fish" colspan="7">„Rybí“ tvary</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td class="obrazek"><img src="../pics/16.png" alt="OLL case 9"></td>
+        <td class="alg">(R U R' U') R' F (R2 U R' U') F'</td>
+        <td class="emptytd"></td>
+        <td class="alg">(R U R' U)(R' F R F')(R U2' R')</td>
+        <td class="obrazek"><img src="../pics/17.png" alt="OLL case 10"></td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>37</td>
+        <td class="obrazek"><img src="../pics/18.png" alt="OLL case 37"></td>
+        <td class="alg">F (R U' R' U')(R U R' F')</td>
+        <td class="emptytd"></td>
+        <td class="alg">(R U2')(R2' F R F')(R U2' R')</td>
+        <td class="obrazek"><img src="../pics/19.png" alt="OLL case 35"></td>
+        <td>35</td>
+    </tr>
+    <tr class="trjmeno">
+    <td class="tdjmeno" id="knightmove" colspan="7">Tvary pohybu jezdce</td>
+</tr>
+<tr>
+    <td>13</td>
+    <td class="obrazek"><img src="../pics/20.png" alt="OLL case 13"></td>
+    <td class="alg">F U R U' R2' F' R U (R U' R')</td>
+    <td class="emptytd"></td>
+    <td class="alg">(R' F R) (U R' F' R) (F U' F')</td>
+    <td class="obrazek"><img src="../pics/21.png" alt="OLL case 14"></td>
+    <td>14</td>
+</tr>
+<tr>
+    <td>16</td>
+    <td class="obrazek"><img src="../pics/22.png" alt="OLL case 16"></td>
+    <td class="alg">(r U r')(R U R' U')(r U' r')</td>
+    <td class="emptytd"></td>
+    <td class="alg">(r' U' r)(R' U' R U)(r' U r)</td>
+    <td class="obrazek"><img src="../pics/23.png" alt="OLL case 15"></td>
+    <td>15</td>
+</tr>
+<tr class="trjmeno">
+    <td class="tdjmeno" id="awkwardshapes" colspan="7">„Nepříjemné“ tvary</td>
+</tr>
+<tr>
+    <td>30</td>
+    <td class="obrazek"><img src="../pics/24.png" alt="OLL case 30"></td>
+    <td class="alg">F U R U2 R' U' R U2 R' U' F'</td>
+    <td class="emptytd"></td>
+    <td class="alg">r2 D' (r U r') D r2 U' (r' U' r)</td>
+    <td class="obrazek"><img src="../pics/25.png" alt="OLL case 29"></td>
+    <td>29</td>
+</tr>
+<tr>
+    <td>41</td>
+    <td class="obrazek"><img src="../pics/26.png" alt="OLL case 41"></td>
+    <td class="alg">(R U R' U R U2' R') F (R U R' U') F'</td>
+    <td class="emptytd"></td>
+    <td class="alg">(R' U' R U' R' U2 R) F (R U R' U') F'</td>
+    <td class="obrazek"><img src="../pics/27.png" alt="OLL case 42"></td>
+    <td>42</td>
+</tr>
+<tr class="trjmeno">
+    <td class="tdjmeno" id="lshapes" colspan="7">Tvary L</td>
+</tr>
+<tr>
+    <td>48</td>
+    <td class="obrazek"><img src="../pics/28.png" alt="OLL case 48"></td>
+    <td class="alg">F (R U R' U')(R U R' U') F'</td>
+    <td class="emptytd"></td>
+    <td class="alg">F' (L' U' L U)(L' U' L U) F</td>
+    <td class="obrazek"><img src="../pics/29.png" alt="OLL case 47"></td>
+    <td>47</td>
+</tr>
+<tr>
+    <td>49</td>
+    <td class="obrazek"><img src="../pics/30.png" alt="OLL case 49"></td>
+    <td class="alg">r U' r2' U r2 U r2' U' r</td>
+    <td class="emptytd"></td>
+    <td class="alg">r' U r2 U' r2' U' r2 U r'</td>
+    <td class="obrazek"><img src="../pics/31.png" alt="OLL case 50"></td>
+    <td>50</td>
+</tr>
+<tr>
+    <td>53</td>
+    <td class="obrazek"><img src="../pics/33.png" alt="OLL case 53"></td>
+    <td class="alg">r' U2 (R U R' U')(R U R' U) r</td>
+    <td class="emptytd"></td>
+    <td class="alg">(r U2 R' U') (R U R' U') R U' r'</td>
+    <td class="obrazek"><img src="../pics/32.png" alt="OLL case 54"></td>
+    <td>54</td>
+</tr>
+<tr class="trjmeno">
+    <td class="tdjmeno" id="boltshapes" colspan="7">Lightning Bolts</td>
+</tr>
+<tr>
+    <td>7</td>
+    <td class="obrazek"><img src="../pics/34.png" alt="OLL case 7"></td>
+    <td class="alg">(r U R' U R U2' r')</td>
+    <td class="emptytd"></td>
+    <td class="alg">(r' U' R U' R' U2 r)</td>
+    <td class="obrazek"><img src="../pics/35.png" alt="OLL case 8"></td>
+    <td>8</td>
+</tr>
+<tr>
+    <td>11</td>
+    <td class="obrazek"><img src="../pics/36.png" alt="OLL case 11"></td>
+    <td class="alg">r' (R2 U R' U R U2 R') U M'</td>
+    <td class="emptytd"></td>
+    <td class="alg">M' (R' U' R U' R' U2 R) U' M</td>
+    <td class="obrazek"><img src="../pics/37.png" alt="OLL case 12"></td>
+    <td>12</td>
+</tr>
+<tr>
+    <td>39</td>
+    <td class="obrazek"><img src="../pics/38.png" alt="OLL case 39"></td>
+    <td class="alg">(L F')(L' U' L U) F U' L'</td>
+    <td class="emptytd"></td>
+    <td class="alg">(R' F)(R U R' U') F' U R</td>
+    <td class="obrazek"><img src="../pics/39.png" alt="OLL case 40"></td>
+    <td>40</td>
+</tr>
+<tr class="trjmeno">
+    <td class="tdjmeno" id="dotshapes" colspan="7">Dot shapes</td>
+</tr>
+<tr>
+    <td>1</td>
+    <td class="obrazek"><img src="../pics/40.png" alt="OLL case 1"></td>
+    <td class="alg">(R U2')(R2' F R F') U2' (R' F R F')</td>
+    <td class="emptytd"></td>
+    <td class="alg">F (R U R' U') F' f (R U R' U') f'</td>
+    <td class="obrazek"><img src="../pics/43.png" alt="OLL case 2"></td>
+    <td>2</td>
+</tr>
+<tr>
+    <td>3</td>
+    <td class="obrazek"><img src="../pics/44.png" alt="OLL case 3"></td>
+    <td class="alg">f (R U R' U') f' U' F (R U R' U') F'</td>
+    <td class="emptytd"></td>
+    <td class="alg">f (R U R' U') f' U F (R U R' U') F'</td>
+    <td class="obrazek"><img src="../pics/45.png" alt="OLL case 4"></td>
+    <td>4</td>
+</tr>
+<tr>
+    <td>18</td>
+    <td class="obrazek"><img src="../pics/42.png" alt="OLL case 18"></td>
+    <td class="alg">y R U2' (R2' F R F') U2' M' (U R U' r')</td>
+    <td class="emptytd"></td>
+    <td class="alg">M U (R U R' U') M' (R' F R F')</td>
+    <td class="obrazek"><img src="../pics/41.png" alt="OLL case 19"></td>
+    <td>19</td>
+</tr>
+<tr>
+    <td>17</td>
+    <td class="obrazek"><img src="../pics/46.png" alt="OLL case 17"></td>
+    <td class="alg">(R U R' U)(R' F R F') U2' (R' F R F')</td>
+    <td class="emptytd"></td>
+    <td class="alg">M U (R U R' U') M2' (U R U' r')</td>
+    <td class="obrazek"><img src="../pics/47.png" alt="OLL case 20"></td>
+    <td>20</td>
+</tr>
+</tbody>    
+</table>
+</div>
+<footer>Filip Kocháň, 2020</footer>    
+</div>
+</body>
+</html>

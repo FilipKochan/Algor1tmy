@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>2-look PLL</title>
+<script src="https://kit.fontawesome.com/afcefdcf53.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../css/cssreset.css">
+<link rel="stylesheet" href="../css/stylePLL1.css">
+<link rel="icon" href="../pics/ikona.png">
+</head>
+<body>
+<div class="obsah">
+<button onclick="window.location.href='../index.html'" class="btn"><i class="fas fa-long-arrow-alt-left"></i></button>
+<h1>2-look PLL</h1>
+<p>Zde je seznam algoritmů ze sekce PLL pro začátečníky.</p>
+<p>Začátečnické PLL má 2 části - jako první přemístíme rohy, potom hrany.</p>
+<div class="grid">
+<table class="table1a">
+    <thead>
+        <tr>
+            <th colspan="2">Jako první přemístíme všechny rohy</th>
+        </tr>
+        <tr>
+            <th>Obrázek</th>
+            <th>Algoritmus</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="tdleft"><img src="../pics/corners1.png" alt="permutace rohů"></td>
+            <td>R U R' F' R U R' U' R' F R2 U' R'</td>
+        </tr>
+    </tbody>
+</table>
+<div class="sipka2"><i class="fas fa-arrow-alt-circle-right"></i></div>
+<table class="table1b">
+    <tbody>
+        <tr>
+            <td class="tdleft"><img src="../pics/corners2.png" alt="permutace rohů"></td>
+            <td>R U R' F' R U R' U' R' F R2 U' R'</td>
+        </tr>
+    </tbody>
+</table>
+<div class="arrow"><div class="sipka"><i class="fas fa-arrow-alt-circle-right"></i></div></div>
+<table class="table2">
+    <thead>
+        <tr>
+            <th colspan="4">Nyní hrany</th>
+        </tr>
+        <tr>
+            <th>Obrázek</th>
+            <th>Algoritmus</th>
+            <th>Obrázek</th>
+            <th>Algoritmus</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="tdleft"><img src="../pics/ubperm.png" alt="Ua perm"></td>
+            <td class="tdright">
+            <ul>
+                <li>M2 U M U2 M' U M2</li>
+                <li>R U' R U R U R U' R' U' R2</li>
+            </ul></td>
+            <td class="tdleft"><img src="../pics/uaperm.png" alt="Ub perm"></td>
+            <td class="tdright">
+            <ul>
+                <li>M2 U' M U2 M' U' M2</li>
+                <li>L' U L' U' L' U' L' U L U L2</li>
+            </ul>  
+            </td>
+        </tr>
+        <tr>
+            <td class="tdleft"><img src="../pics/hperm.png" alt="H perm"></td>
+            <td class="tdright">
+                <ul>
+                    <li>M2 U M2 U2 M2 U M2</li>
+                    <li>M2 U' M2 U2 M2 U' M2</li>
+                </ul>
+            </td>
+            <td class="tdleft"><img src="../pics/zperm.png" alt="Z perm"></td>
+            <td class="tdright">M2 U M2 U M U2 M2 U2 M U2</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<footer>Filip Kocháň, 2020</footer>
+</div>
+</body>
+</html>

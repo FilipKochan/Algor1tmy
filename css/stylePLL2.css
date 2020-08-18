@@ -1,0 +1,210 @@
+body{
+
+    font-size: 150%;
+
+    background: repeating-linear-gradient(22.5deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px,transparent 1px, transparent 21px,rgba(255,255,255,0.07) 21px, rgba(255,255,255,0.07) 22px,transparent 22px, transparent 62px,rgba(255,255,255,0.07) 62px, rgba(255,255,255,0.07) 63px,transparent 63px, transparent 123px),repeating-linear-gradient(112.5deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px,transparent 1px, transparent 21px,rgba(255,255,255,0.07) 21px,
+
+     rgba(255,255,255,0.07) 22px,transparent 22px, transparent 62px,rgba(255,255,255,0.07) 62px, 
+
+     rgba(255,255,255,0.07) 63px,transparent 63px, transparent 123px),repeating-linear-gradient(67.5deg, rgba(255,255,255,0.07) 0px, 
+
+     rgba(255,255,255,0.07) 1px,transparent 1px, transparent 21px,rgba(255,255,255,0.07) 21px, rgba(255,255,255,0.07) 22px,transparent 22px, 
+
+     transparent 62px,rgba(255,255,255,0.07) 62px, rgba(255,255,255,0.07) 63px,transparent 63px, transparent 123px),repeating-linear-gradient(157.5deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px,transparent 1px, transparent 21px,rgba(255,255,255,0.07) 21px, rgba(255,255,255,0.07) 22px,transparent 22px, transparent 62px,rgba(255,255,255,0.07) 62px, rgba(255,255,255,0.07) 63px,transparent 63px, transparent 123px),
+
+     linear-gradient(90deg, hsl(210,81%,56%),hsl(237, 38%, 30%));
+
+    margin: 25px 25px 0 25px;
+
+    background-attachment: fixed;
+
+    font-family: Tahoma, Geneva, sans-serif;
+
+}
+
+.obsah{
+
+    background-color: rgba(255, 255, 255, 0.7);
+
+    padding: 25px 50px;
+
+    margin: 25px auto;
+
+    border-radius: 20px;
+
+}
+
+footer{
+
+    vertical-align: bottom;
+
+    text-align: right;
+
+    margin-top: 25px;
+
+    clear: both;
+
+}
+
+h1{
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    margin-bottom: 50px;
+
+    font-size: 3rem;
+
+    font-family: georgia,serif;
+
+}
+
+p{
+
+    padding: 5px 0;
+
+    line-height: 1.8rem;
+
+}
+
+.btn{
+
+    position: fixed;
+
+    font-size: 1rem;
+
+    border: 3px solid #2f326a;
+
+    border-radius: 15px;
+
+    background-color: #348fea;
+
+    font-size: 2rem;
+
+    width: 4rem;
+
+    margin-top: 35px;
+
+    z-index: 1;
+
+    transition: 0.5s ease-in-out;
+
+}
+
+.btn:hover{
+
+    background-color: #2f326a;
+
+
+    color: #fff;
+
+    cursor: pointer;
+
+}
+
+.tab1{
+
+    margin: auto;
+
+    margin-top: 30px;
+
+}
+
+.tab1 tr{
+
+    text-align: center;
+
+}
+
+.tab1 td, .tab1 th{
+
+    vertical-align: middle;
+
+    padding: 15px;
+
+}
+
+tbody tr{
+
+    border-bottom: 4px solid #000;
+
+}
+
+.obrazek{
+
+    background-color: #fff;
+
+}
+
+.tdjmeno{
+
+    font-weight: bold;
+
+    font-size: 0.9em;
+
+    background-color: #3498db57;
+
+}
+
+.emptytd{
+
+    width: 8%;
+
+}
+
+nav ul li{
+
+    display: inline;
+
+    margin-right: 25px;
+
+}
+
+nav{
+
+    position: sticky;
+
+    position: -webkit-sticky;
+
+    top: 0;
+
+    right: auto;
+
+}
+
+nav a{
+
+    display: inline-block;
+
+    margin-top: 5px;
+
+    padding: 7px;
+
+    font-size: 1.4rem;
+
+    background-color: #82b0ff;
+
+    border-radius: 5px;
+
+}
+
+nav a:hover{
+
+    background-color: #002f80;
+
+    transition: ease-in-out .5s;
+
+    color: #fff;
+
+}
+
+.jmeno{
+
+    font-weight: bold;
+
+    margin: 10px 0;
+
+}

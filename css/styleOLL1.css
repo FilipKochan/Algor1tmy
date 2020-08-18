@@ -1,0 +1,231 @@
+body{
+
+    font-size: 150%;
+
+    background: repeating-linear-gradient(22.5deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px,transparent 1px, transparent 21px,rgba(255,255,255,0.07) 21px, rgba(255,255,255,0.07) 22px,transparent 22px, transparent 62px,rgba(255,255,255,0.07) 62px, rgba(255,255,255,0.07) 63px,transparent 63px, transparent 123px),repeating-linear-gradient(112.5deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px,transparent 1px, transparent 21px,rgba(255,255,255,0.07) 21px, rgba(255,255,255,0.07) 22px,transparent 22px, transparent 62px,rgba(255,255,255,0.07) 62px, rgba(255,255,255,0.07) 63px,transparent 63px, transparent 123px),repeating-linear-gradient(67.5deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px,transparent 1px, transparent 21px,rgba(255,255,255,0.07) 21px, rgba(255,255,255,0.07) 22px,transparent 22px, transparent 62px,rgba(255,255,255,0.07) 62px, rgba(255,255,255,0.07) 63px,transparent 63px, transparent 123px),repeating-linear-gradient(157.5deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px,transparent 1px, transparent 21px,rgba(255,255,255,0.07) 21px, rgba(255,255,255,0.07) 22px,transparent 22px, transparent 62px,rgba(255,255,255,0.07) 62px, 
+
+    rgba(255,255,255,0.07) 63px,transparent 63px, transparent 123px),linear-gradient(90deg, hsl(168, 76%, 42%),hsl(210,81%,56%));
+
+    margin: 25px 25px 0 25px;
+
+    background-attachment: fixed;
+
+    font-family: Tahoma, Geneva, sans-serif;
+
+}
+
+.obsah{
+
+    background-color: rgba(255, 255, 255, 0.7);
+
+    padding: 25px 50px;
+
+    margin: 25px auto;
+
+    border-radius: 20px;
+
+}
+
+.table1{
+
+    margin: 10px 0;
+
+    grid-area: t1;
+
+}
+
+.table2{
+
+    margin: 10px 10px 10px 0;
+
+    grid-area: t2;
+
+}
+
+abbr{
+
+    text-decoration: none;
+
+    font-style: italic;
+
+}
+
+abbr:hover{
+
+    text-decoration: underline;
+
+}
+
+thead, th{
+
+    border: none;
+
+    padding: 15px;
+
+    vertical-align: middle;
+
+}
+
+.table1 tbody tr, .table2 tbody tr{
+
+   height: 9.5rem;
+
+}
+
+.table1 .tdleft{
+
+    width: 30%;
+
+    background-color: #fff;
+
+}
+
+.table2 .tdleft{
+
+    width: 15%;
+
+    background-color: #fff;
+
+}
+
+.table2 .tdright{
+
+    width: 35%;
+
+}
+
+.table1 td, .table2 td{
+
+    padding: 7px;
+
+    border: 3px solid #000;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+}
+
+.lasttd{
+
+    width: 15%;
+
+    background-color: none;
+
+}
+
+footer{
+
+    vertical-align: bottom;
+
+    text-align: right;
+
+    margin-top: 10px;
+
+    clear: both;
+
+}
+
+h1{
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    margin-bottom: 50px;
+
+    font-size: 3rem;
+
+    font-family: georgia,serif;
+
+}
+
+p{
+
+    padding: 5px 0 5px 0;
+
+}
+
+.btn{
+
+    position: fixed;
+
+    font-size: 1rem;
+
+    border: 3px solid #348fea;
+
+    border-radius: 15px;
+
+    background-color: #1abc9c;
+
+    font-size: 2rem;
+
+    width: 4rem;
+
+    color: #fff;
+    transition: 0.5s ease-in-out;
+    
+
+}
+
+.btn:hover{
+
+    background-color: #348fea;
+
+
+
+    color: #fff;
+
+    cursor: pointer;
+
+}
+
+.table1, .table2{
+
+    display: inline-table;
+
+}
+
+th{
+
+    font-weight: bold;
+
+}
+
+.arrow{
+
+    grid-area: sipka;
+
+    font-size: 3rem;
+
+    position: relative;
+
+}
+
+.sipka{
+
+    padding: 10px;
+
+    position: relative;
+
+    top: 50%;
+
+}
+
+.grid{
+
+    display: grid;
+
+    grid-template-areas: 't1 sipka t2';
+
+}
+
+td:nth-of-type(2n){
+
+    text-align: left;
+
+    padding-left: 2.5rem;
+
+}

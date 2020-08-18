@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<title>1-look PLL</title>
+<meta charset="utf-8">
+<script src="https://kit.fontawesome.com/afcefdcf53.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../css/cssreset.css">
+<link rel="stylesheet" href="../css/stylePLL2.css">
+<link rel="icon" href="../pics/ikona.png">
+</head>
+<body>
+<div class="obsah">
+<button onclick="window.location.href='../index.html'" class="btn"><i class="fas fa-long-arrow-alt-left"></i></button>  
+<h1>1-look PLL</h1>
+
+<p>Zde je seznam algoritmů ze sekce 1-look PLL.</p>
+<p>V 1-look PLL provedeme zaráz permutaci jak rohů, tak i hran. Naučit se rychle rozeznávat dané případy permutace poslední vrstvy může být ze začátku složité. 
+    Šipky na obrázcích jsou v podstatě pouze pro pochopení toho, kam který "dílek" určitý algoritmus přemístí. Pro efektivní idientifikaci daného PLL případu je dobré sledovat tzv. <em><abbr title="2 stejné barvy vedle sebe, blok se vyskytuje např. u G a N permutací.">bloky</abbr></em>, <em><abbr title="2 rohy, které mají na jedné straně kostky stejnou barvu, například Z a H perm mají čtvery světla.">světla</abbr></em> a kde se nacházejí sobě navzájem opačné barvy (červená x oranžová, modrá x zelená a bílá x žlutá). 
+    K poznání jakékoliv permutace stačí vidět libovolné 2 sousední strany kostky (tj. kostkou není v PLL potřeba vůbec otáčet). Některé permutace jsou však na poznání pouze ze 2 stran poměrně náročné.
+</p>
+<p>
+Nyní pár příkladů využití tohoto principu pro rozpoznání permutací. S tímto postupem to lze zvládnout velice rychle (v řádech desetin sekundy až pár sekund) (samozřejmě s trochou tréninku):</p><p>
+Vidím 2 bloky a roh mezi nimi má na každé straně opačnou barvu jako blok, vedle kterého leží - jedná se o Y perm.<br>
+Vidím 2 bloky se společným rohem. Vnější rohy mají na každé ze 2 stran opačnou barvu než blok, vedle kterého leží - jde o V perm. Kdyby měly tyto 2 vnější rohy stejnou barvu, jednalo by se o jeden z A permů.<br>
+2 světla a mezi nimi vždy hrana opačné barvy - H perm.<br>
+Na jedné straně světla, které mezi sebou nemají opačnou barvu, a na druhé blok opačné barvy, než mají světla - jedná se o Ga nebo Gc perm. (Jdeme-li po směru hod. ručiček a vidíme blok a potom světla, jedná se o Ga perm, v opačném případě je to Gc perm.)<br>
+Obě strany postupují: blok - roh opačné barvy - blok - roh opačné barvy. Jde o N perm. (a nebo b podle toho, jestli se toto děje po, nebo proti směru hod. ručiček)
+</p>
+<table class="tab1">
+<thead>
+    <tr>
+        <th>Obrázek</th>
+        <th>Algoritmus</th>
+        <th class="emptytd"></th>
+        <th>Algoritmus</th>
+        <th>Obrázek</th>
+    </tr>
+</thead>
+<tbody>
+    <tr class="trjmeno" style="border-top: 4px solid #000000;">
+        <td class="tdjmeno" id="edgeperm" colspan="5">Permutace hran</td>
+    </tr>
+    <tr>
+        <td class="obrazek"><img src="../pics/uaperm.png" alt="Ua perm"></td>
+        <td class="alg"><ul><li>R U (R U R' U') R' U' (R' U R')</li><li class="jmeno">Ub perm</li></ul></td>
+        <td class="emptytd"></td>
+        <td class="alg"><ul><li>(R U' R U) R U (R U' R' U') R2</li><li class="jmeno">Ua perm</li></ul></td>
+        <td class="obrazek"><img src="../pics/ubperm.png" alt="Ub perm"></td>
+    </tr>
+    <tr>
+        <td class="obrazek"><img src="../pics/zperm.png" alt="Z perm"></td>
+        <td class="alg"><ul><li>(M2' U M2' U) (M' U2) (M2' U2 M')</li><li class="jmeno">Z perm</li></ul></td>
+        <td class="emptytd"></td>
+        <td class="alg"><ul><li>(M2' U M2') U2 (M2' U M2')</li><li class="jmeno">H perm</li></ul></td>
+        <td class="obrazek"><img src="../pics/hperm.png" alt="H perm"></td>
+    </tr>
+    <tr class="trjmeno">
+        <td class="tdjmeno" id="corner" colspan="5">Permutace rohů</td>
+    </tr>
+    <tr>
+        <td class="obrazek"><img src="../pics/aaperm.png" alt="Aa perm"></td>
+        <td class="alg"><ul><li>x (R' U R') D2 (R U' R') D2 R2 x'</li><li class="jmeno">Aa perm</li></ul></td>
+        <td class="emptytd"></td>
+        <td class="alg"><ul><li>x R2' D2 (R U R') D2 (R U' R) x'</li><li class="jmeno">Ab perm</li></ul></td>
+        <td class="obrazek"><img src="../pics/abperm.png" alt="Ab perm"></td>
+    </tr> 
+    <tr>
+        <td class="obrazek"><img src="../pics/eperm.png" alt="E perm"></td>
+        <td class="alg"><ul><li>x' (R U' R' D)(R U R' D')(R U R' D)(R U' R' D') x</li><li class="jmeno">E perm</li></ul></td>
+        <td class="emptytd"></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="trjmeno">
+        <td class="tdjmeno" id="adjswap" colspan="5">Záměna sousedních rohů</td>
+    </tr>
+    <tr>
+        <td class="obrazek"><img src="../pics/raperm.png" alt="Ra perm"></td>
+        <td class="alg"><ul><li>(R U' R' U')(R U R D)(R' U' R D')(R' U2 R')</li><li class="jmeno">Ra perm</li></ul></td>
+        <td class="emptytd"></td>
+        <td class="alg"><ul><li>(R' U2 R U2') R' F (R U R' U') R' F' R2</li><li class="jmeno">Rb perm</li></ul></td>
+        <td class="obrazek"><img src="../pics/rbperm.png" alt="Rb perm"></td>
+    </tr>
+    <tr>
+        <td class="obrazek"><img src="../pics/japerm.png" alt="Ja perm"></td>
+        <td class="alg"><ul><li>(R' U L' U2)(R U' R' U2 R) L</li><li class="jmeno">Ja perm</li></ul></td>
+        <td class="emptytd"></td>
+        <td class="alg"><ul><li>(R U R' F')(R U R' U') R' F R2 U' R'</li><li class="jmeno">Jb perm</li></ul></td>
+        <td class="obrazek"><img src="../pics/jbperm.png" alt="Jb perm"></td>
+    </tr>    <tr>
+        <td class="obrazek"><img src="../pics/tperm.png" alt="T perm"></td>
+        <td class="alg"><ul><li>(R U R' U')(R' F R2 U') R' U' (R U R' F')</li><li class="jmeno">T perm</li></ul></td>
+        <td class="emptytd"></td>
+        <td class="alg"><ul><li>(R' U' F')(R U R' U')(R' F R2 U')(R' U' R U)(R' U R)</li><li class="jmeno">F perm</li></ul></td>
+        <td class="obrazek"><img src="../pics/fperm.png" alt="F perm"></td>
+    </tr>
+    <tr class="trjmeno">
+        <td class="tdjmeno" id="diagswap" colspan="5">Záměna protějších hran a rohů</td>
+    </tr>
+    <tr>
+        <td class="obrazek"><img src="../pics/vperm.png" alt="V perm"></td>
+        <td class="alg"><ul><li>(R' U R' U') y (R' F' R2 U')(R' U R' F) R F</li><li class="jmeno">V perm</li></ul></td>
+        <td class="emptytd"></td>
+        <td class="alg"><ul><li>F (R U' R' U')(R U R' F')(R U R' U')(R' F R F')</li><li class="jmeno">Y perm</li></ul></td>
+        <td class="obrazek"><img src="../pics/yperm.png" alt="Y perm"></td>
+    </tr>    
+    <tr>
+        <td class="obrazek"><img src="../pics/naperm.png" alt="Na perm"></td>
+        <td class="alg"><ul><li>(RUR'U)(RUR'F')(RUR'U')(R'FR2U') R' U2 (RU'R')</li><li class="jmeno">Na perm</li></ul></td>
+        <td class="emptytd"></td>
+        <td class="alg"><ul><li>(R' U R U')(R' F' U' F)(R U R' F) R' F' (R U' R)</li><li class="jmeno">Nb perm</li></ul></td>
+        <td class="obrazek"><img src="../pics/nbperm.png" alt="Nb perm"></td>
+    </tr>
+    <tr class="trjmeno">
+        <td class="tdjmeno" id="gperm" colspan="5">G permutace (dvojité cykly)</td>
+    </tr>
+    <tr>
+        <td class="obrazek"><img src="../pics/gaperm.png" alt="Ga perm"></td>
+        <td class="alg"><ul><li>R2 U (R' U R' U')(R U' R2) D U' (R' U R D')</li><li class="jmeno">Ga perm</li></ul></td>
+        <td class="emptytd"></td>
+        <td class="alg"><ul><li>(F' U' F)(R2 u R' U)(R U' R u') R2'</li><li class="jmeno">Gb perm</li></ul></td>
+        <td class="obrazek"><img src="../pics/gbperm.png" alt="Gb perm"></td>
+    </tr>
+    <tr>
+        <td class="obrazek"><img src="../pics/gcperm.png" alt="Gc perm"></td>
+        <td class="alg"><ul><li>R2' F2 (R U2' R U2') R' F (R U R' U') R' F R2</li><li class="jmeno">Gc perm</li></ul></td>
+        <td class="emptytd"></td>
+        <td class="alg"><ul><li>D' (R U R' U') D (R2 U' R U')(R' U R' U) R2</li><li class="jmeno">Gd perm</li></ul></td>
+        <td class="obrazek"><img src="../pics/gdperm.png" alt="Gd perm"></td>
+    </tr>
+</tbody>    
+</table>
+<footer>Filip Kocháň, 2020</footer>    
+</div>
+</body>
+</html>

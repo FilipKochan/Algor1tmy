@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>2-look OLL</title>
+<script src="https://kit.fontawesome.com/afcefdcf53.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../css/cssreset.css">
+<link rel="stylesheet" href="../css/styleOLL1.css">
+<link rel="stylesheet" href="../css/lightbox.css">
+<link rel="icon" href="../pics/ikona.png">
+</head>
+<body>
+<div class="obsah">
+<button onclick="window.location.href='../index.html'" class="btn"><i class="fas fa-long-arrow-alt-left"></i></button>
+<h1>2-look OLL</h1>
+<p>Zde je seznam algoritmů ze sekce OLL pro začátečníky.</p>
+<p>Začátečnické OLL má 2 části - v první otočíme všechny hrany stejnou barvou nahoru, ve druhé zbývající rohy.</p>
+<div class="grid">
+<table class="table1">
+    <thead>
+        <tr>
+            <th colspan="2">Jako první otočíme všechny hrany</th>
+        </tr>
+        <tr>
+            <th>Obrázek</th>
+            <th>Algoritmus</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="tdleft"><a href="../pics/eo2.png" data-lightbox="EO" data-title="Orientace hran případ 1"><img src="../pics/eo2.png" alt="edgeorientation1"></a></td>
+            <td>F (R U R' U') F'</td>
+        </tr>
+        <tr>
+            <td class="tdleft"><a href="../pics/eo1.png" data-lightbox="EO" data-title="Orientace hran případ 2"><img src="../pics/eo1.png" alt="edgeorientation2"></a></td>
+            <td>F (R U R' U')2 F'<abbr title="Tento zápis znamená: F(RUR'U')(RUR'U')F'">?</abbr></td>
+        </tr>
+        <tr>
+            <td class="tdleft"><a href="../pics/eo3.png" data-lightbox="EO" data-title="Orientace hran případ 3"><img src="../pics/eo3.png" alt="edgeorientation3"></a></td>
+            <td>F (R U R' U') F' U2 F (R U R' U')2 F'
+            </td>
+        </tr>   
+    </tbody>
+</table>
+<div class="arrow"><div class="sipka"><i class="fas fa-arrow-alt-circle-right"></i></div>
+</div>
+<table class="table2">
+    <thead>
+        <tr>
+            <th colspan="4">Nyní otočíme zbývající rohy</th>
+        </tr>
+        <tr>
+            <th>Obrázek</th>
+            <th>Algoritmus</th>
+            <th>Obrázek</th>
+            <th>Algoritmus</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="tdleft"><a href="../pics/alledgesoriented1.jpg" data-lightbox="CO" data-title="Orientace rohů - sune"><img src="../pics/alledgesoriented1.jpg" alt="sune"></a></td>
+            <td class="tdright">(R U R' U)(R U2 R')</td>
+            <td class="tdleft"><a href="../pics/alledgesoriented4.jpg" data-lightbox="CO" data-title="Orientace rohů - Pi case"><img src="../pics/alledgesoriented4.jpg" alt="case5"></a></td>
+            <td class="tdright">R U2 (R2 U' R2 U' R2) U2 R</td>
+        </tr>
+        <tr>
+            <td class="tdleft"><a href="../pics/alledgesoriented2.jpg" data-lightbox="CO" data-title="Orientace rohů - antisune"><img src="../pics/alledgesoriented2.jpg" alt="antisune"></a></td>
+            <td class="tdright">(R' U' R')(R' U2 R)</td>
+            <td class="tdleft"><a href="../pics/alledgesoriented5.jpg" data-lightbox="CO" data-title="Orientace rohů - Bowtie case"><img src="../pics/alledgesoriented5.jpg" alt="case6"></a></td>
+            <td class="tdright">(l' U' L' U)(l F' L F)</td>
+        </tr>
+        <tr>
+            <td class="tdleft"><a href="../pics/alledgesoriented7.jpg" data-lightbox="CO" data-title="Orientace rohů - U case"><img src="../pics/alledgesoriented7.jpg"  alt="case3"></a></td>
+            <td class="tdright">(R U R' U)(R U2 R')(R' U' R U')(R' U2 R)</td>
+            <td class="tdleft"><a href="../pics/alledgesoriented3.jpg" data-lightbox="CO" data-title="Orientace rohů - H case"><img src="../pics/alledgesoriented3.jpg" alt="case7"></a></td>
+            <td class="tdright">F (R U R' U')3 F'</td>
+        </tr>
+        <tr>
+            <td class="tdleft"><a href="../pics/alledgesoriented6.jpg" data-lightbox="CO" data-title="Orientace rohů - T case"><img src="../pics/alledgesoriented6.jpg" alt="case4"></a></td>
+            <td class="tdright">(r U R' U')(r' F R F')</td>
+            <td class="lasttd" style="border: none"></td>
+            <td class="tdright" style="border: none"></td>
+        </tr> 
+    </tbody>
+</table>
+</div>
+<footer>Filip Kocháň, 2020</footer>
+</div>
+<script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+<script src="../js/lightbox.js"></script>
+<script>
+    lightbox.option({
+        'disableScrolling' : true
+    })
+</script>
+</body>
+</html>
